@@ -1,0 +1,20 @@
+def intro_num():
+    return int(input("Introduce un número entero: "))
+
+
+def binario(num):
+    if num == 0:
+        return "0"
+    elif num == 1:
+        return "1"
+    else:
+        return binario(num // 2) + str(num % 2)
+
+
+def main():
+    num = intro_num()
+    print(f"El resultado en binario es: ", binario(num))
+
+
+if __name__ == "__main__":
+    main()
